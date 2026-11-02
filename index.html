@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ikee, With Love</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ENVELOPE INTRO -->
+    <section id="intro" class="intro">
+        <div class="intro-content">
+            <p class="intro-small">a little something for you</p>
+
+            <h1>happy birthday, ikee</h1>
+
+            <p class="handwritten">psst... open this ♡</p>
+
+            <button id="openEnvelope" class="envelope-button" aria-label="Open your birthday letter">
+                <div class="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-letter">
+                        <span>for you,</span>
+                        <span>with love ♡</span>
+                    </div>
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-heart">♡</div>
+                </div>
+            </button>
+
+            <p class="click-note">click the envelope to open</p>
+        </div>
+    </section>
+
+    <!-- FLOWER / PETAL ANIMATION -->
+    <div id="petalContainer" class="petal-container"></div>
+
+    <!-- BOOK SECTION -->
+    <main id="bookSection" class="book-section hidden">
+
+        <div class="book-heading">
+            <p class="small-heading">a birthday keepsake</p>
+            <h2>for all the little things i love about you.</h2>
+        </div>
+
+        <div class="book-area">
+
+            <!-- CLOSED FRONT COVER -->
+            <div id="frontCover" class="single-cover">
+                <img src="pages/page-01.jpg" alt="Birthday book front cover">
+                <button id="openBook" class="cover-click" aria-label="Open the book"></button>
+                <p class="cover-hint">click to open</p>
+            </div>
+
+            <!-- OPEN BOOK -->
+            <div id="openBookView" class="book hidden">
+
+                <div class="book-pages">
+
+                    <div class="page left-page">
+                        <img id="leftImage" src="" alt="Left page">
+                    </div>
+
+                    <div class="page right-page">
+                        <img id="rightImage" src="" alt="Right page">
+                    </div>
+
+                    <!-- Animated turning page -->
+                    <div id="turnSheet" class="turn-sheet">
+                        <div class="turn-face turn-front">
+                            <img id="turnFrontImage" src="" alt="">
+                        </div>
+                        <div class="turn-face turn-back">
+                            <img id="turnBackImage" src="" alt="">
+                        </div>
+                    </div>
+
+                    <div class="book-spine"></div>
+                </div>
+
+                <div class="book-controls">
+                    <button id="prevPage" class="page-arrow" aria-label="Previous page">
+                        &#8592;
+                    </button>
+
+                    <span id="pageCounter">02 — 03 / 14</span>
+
+                    <button id="nextPage" class="page-arrow" aria-label="Next page">
+                        &#8594;
+                    </button>
+                </div>
+            </div>
+
+            <!-- CLOSED BACK COVER -->
+            <div id="backCover" class="single-cover hidden">
+                <img src="pages/page-14.jpg" alt="Birthday book back cover">
+                <div class="back-cover-message">
+                    <p>♡</p>
+                    <span>with love, Jech</span>
+                </div>
+                <button id="reopenBook" class="cover-click" aria-label="Read the book again"></button>
+            </div>
+
+        </div>
+
+        <p id="bookHint" class="book-hint">take your time. this one's for you.</p>
+
+        <button id="readAgain" class="read-again hidden">read again ♡</button>
+
+    </main>
+
+    <!-- OPTIONAL MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/slow-dance.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
